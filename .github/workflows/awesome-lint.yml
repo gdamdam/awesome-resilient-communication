@@ -1,0 +1,21 @@
+name: Lint
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  awesome-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npx --yes awesome-lint
+      - name: Validate README/metadata consistency
+        run: python3 .github/scripts/validate_metadata.py
