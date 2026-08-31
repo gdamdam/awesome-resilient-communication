@@ -78,6 +78,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          gh label create link-rot --repo "$GITHUB_REPOSITORY" \
+            --description 'Broken or redirected links found by the scheduled link check' \
+            --color d73a4a --force
           n=$(gh issue list --repo "$GITHUB_REPOSITORY" --label link-rot \
                 --state open --json number --jq '.[0].number // empty')
           if [ -n "$n" ]; then
