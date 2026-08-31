@@ -33,6 +33,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          gh label create status-audit --repo "$GITHUB_REPOSITORY" \
+            --description 'Findings from the quarterly project-status audit' \
+            --color c2e0c6 --force
           n=$(gh issue list --repo "$GITHUB_REPOSITORY" --label status-audit \
                 --state open --json number --jq '.[0].number // empty')
           if [ -n "$n" ]; then
