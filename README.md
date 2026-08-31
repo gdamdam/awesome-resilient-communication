@@ -84,7 +84,7 @@ Tools in the censorship-circumvention sections need a working internet path and 
 *Transmitting requires an amateur radio license, and encryption is prohibited on amateur bands in most jurisdictions — these provide availability, not confidentiality.*
 
 - [APRS](https://www.aprs.org/) - Packet-radio protocol for positions, telemetry, and short messages over VHF, relayed node-to-node by digipeaters; works entirely off-grid, with optional internet gateways (APRS-IS).
-- [AX.25](https://www.tapr.org/pdf/AX25.2.2.pdf) - The data-link protocol underlying most amateur packet radio, including APRS and Winlink RF links; implemented in the Linux kernel.
+- [AX.25](https://en.wikipedia.org/wiki/AX.25) - The data-link protocol underlying most amateur packet radio, including APRS and Winlink RF links; implemented in the Linux kernel.
 - [M17](https://m17project.org/) - Fully open digital voice and data protocol for VHF/UHF radio, using the open Codec 2 vocoder as an alternative to proprietary digital voice systems.
 
 ### Censorship-Resistant Transports
@@ -142,12 +142,12 @@ Tools in the censorship-circumvention sections need a working internet path and 
 *Same caveats as the protocols above: a license is required to transmit, and content is unencrypted.*
 
 - [Dire Wolf](https://github.com/wb2osz/direwolf) - Software TNC that turns any computer with a sound card into an AX.25 packet station, digipeater, or APRS gateway; the modem layer behind most open packet-radio tools.
-- [fldigi](http://www.w1hkj.com/) - Multi-mode soundcard suite (PSK31, Olivia, RTTY, and many more) with companion forms and file-transfer tools, a staple of emergency nets for two decades.
+- [fldigi](https://www.w1hkj.org/) - Multi-mode soundcard suite (PSK31, Olivia, RTTY, and many more) with companion forms and file-transfer tools, a staple of emergency nets for two decades.
 - [FreeDATA](https://freedata.app/) - Open HF file and message transfer using Codec 2-based modems, built as the open alternative to the proprietary VARA modem.
 - [FreeDV](https://freedv.org/) - Open digital voice for HF radio built on the Codec 2 low-bitrate speech codec.
 - [JS8Call](http://js8call.com/) - Weak-signal HF keyboard chat derived from FT8, with store-and-forward relaying — intercontinental text messaging with no infrastructure at all.
 - [Pat](https://getpat.io/) - Cross-platform Winlink email client written in Go, the standard open client for email-over-radio on Linux and macOS.
-- [Xastir](https://xastir.org/) - Long-standing graphical APRS client for mapping, tracking, and messaging over RF.
+- [Xastir](https://github.com/Xastir/Xastir) - Long-standing graphical APRS client for mapping, tracking, and messaging over RF.
 
 ## Hardware and Firmware
 *Most LoRa projects below run on inexpensive ESP32/nRF52 developer boards (LilyGo, Heltec, RAK); these are commercial products whose designs are only partially open.*
@@ -164,7 +164,7 @@ Tools in the censorship-circumvention sections need a working internet path and 
 - [OpenWrt](https://openwrt.org/) - The general-purpose open router firmware that AREDN, Gluon, and LibreMesh all build on.
 
 ### Open Hardware
-- [LibreRouter](https://librerouter.org/) - Open-hardware multi-radio router purpose-built for community mesh networks, developed by AlterMundi; firmware ecosystem is active, hardware development is quiet.
+- [LibreRouter](https://gitlab.com/librerouter) - Open-hardware multi-radio router purpose-built for community mesh networks, developed by AlterMundi; firmware ecosystem is active, hardware development is quiet.
 
 ## Networks and Deployments
 *Living networks and documented real-world deployments.*
@@ -201,7 +201,7 @@ Tools in the censorship-circumvention sections need a working internet path and 
 ## Organizations
 - [Access Now Digital Security Helpline](https://www.accessnow.org/help/) - Free 24/7 security helpline for civil society, from the organization behind the #KeepItOn shutdown-tracking coalition.
 - [Association for Progressive Communications](https://www.apc.org/) - Long-running network supporting community networks and connectivity rights worldwide.
-- [Internet Society Community Networks](https://www.internetsociety.org/issues/community-networks/) - Grants and technical support for community-owned connectivity; co-developed the LibreRouter.
+- [Internet Society Community Networks](https://www.isocfoundation.org/grant-programme/community-centered-connectivity/) - Grants and technical support for community-owned connectivity; co-developed the LibreRouter.
 - [NetHope](https://nethope.org/) - Coalition of NGOs and technology companies that restores connectivity after disasters, including 90 Wi-Fi sites across Puerto Rico after Hurricane María.
 - [Télécoms Sans Frontières](https://www.tsfi.org/) - Emergency telecom NGO deploying satellite connectivity alongside first responders since 1998.
 
