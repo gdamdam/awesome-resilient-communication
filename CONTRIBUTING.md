@@ -30,6 +30,7 @@ These are closed without review, regardless of technical merit:
 - One project per pull request.
 - Entry format: `- [Name](https://example.org/) - Short, factual description that starts with a capital letter and ends with punctuation.`
 - Add the entry to the correct section, in alphabetical order.
+- Do not add your project to the *Resilience at a Glance* matrix — it holds a small fixed set of representative examples, not every entry.
 - If the project's main link is not its GitHub repository, add a mapping (or an `exempt` reason) in `.github/data/repos.json` so the status audit can monitor it — CI enforces this.
 - In the PR description, explain **why resilience is core to the project's architecture**, what infrastructure it actually requires (servers, relays, gateways, subscriptions, licenses), and how it meets the criteria above. The PR template asks for this — PRs that skip it are closed.
 

@@ -24,12 +24,13 @@ Entries marked **Dormant** still work but have seen no meaningful development fo
 - **Infrastructure independence** — communication works with no internet, cell service, or servers at all.
 - **Disruption tolerance** — communication survives intermittent, high-latency, or partitioned links by storing and forwarding.
 
-Tools in the censorship-circumvention sections need a working internet path and do nothing in a full shutdown; off-grid tools work in a full shutdown but usually offer no anonymity. No single tool covers everything.
+No single tool covers all six — the Resilience at a Glance matrix below shows how representative tools spread their effort across them.
 
 **Inclusion is not a security endorsement.** Assume a project has had *no* independent security audit unless the entry names one. If your safety depends on a tool, evaluate your own threat model first — EFF's Surveillance Self-Defense, listed under Guides and Threat Models below, is a good starting point — and prefer audited tools with documented limitations over impressive claims.
 
 ## Contents
 
+- [Resilience at a Glance](#resilience-at-a-glance)
 - [Protocols and Networking Stacks](#protocols-and-networking-stacks)
   - [Delay-Tolerant Networking](#delay-tolerant-networking)
   - [Mesh Routing and Overlay Networks](#mesh-routing-and-overlay-networks)
@@ -60,6 +61,33 @@ Tools in the censorship-circumvention sections need a working internet path and 
 - [Graveyard](#graveyard)
 - [Other Related Lists](#other-related-lists)
 - [Contributors](#contributors)
+
+## Resilience at a Glance
+A few representative entries — deliberately not all of them — classified against the six properties above, to show how differently "resilient" tools spread their effort. The six properties cluster into two broad design goals. Tools built for **hostile but functioning networks** — confidentiality, anonymity, metadata resistance, censorship circumvention — assume the internet works and an adversary watches or filters it; Tor-based messengers live here. Tools built for **broken, absent, or intermittent networks** — infrastructure independence, disruption tolerance — assume connectivity itself has failed; mesh radio and store-and-forward systems live here. The two groups are not exclusive: Briar deliberately spans both, and Reticulum brings strong encryption to infrastructure-free links.
+
+Read the matrix by failure mode, not as a ranking: internet fully down → *infrastructure independence*; internet up but filtered → *censorship circumvention*; connectivity intermittent → *disruption tolerance*. A ✗ usually means a system never set out to provide that property, and a ✓ marks a design goal, not a security guarantee — the audit caveat above applies to every cell. Rows run from hostile-network tools to broken-network tools.
+
+|System          |Confidentiality|Anonymity|Metadata resistance|Censorship circumvention|Infrastructure independence|Disruption tolerance|
+|----------------|---------------|---------|-------------------|------------------------|---------------------------|--------------------|
+|Psiphon         |N/A            |✗        |✗                  |✓                       |✗                          |N/A                 |
+|Ricochet Refresh|✓              |✓        |✓                  |◐                       |✗                          |✗                   |
+|Cwtch           |✓              |✓        |✓                  |◐                       |✗                          |◐                   |
+|Briar           |✓              |✓        |✓                  |✓                       |✓                          |◐                   |
+|Bitchat         |◐              |◐        |✗                  |✗                       |✓                          |✓                   |
+|qaul            |✓              |✗        |✗                  |✗                       |✓                          |✓                   |
+|Meshtastic      |◐              |✗        |✗                  |✗                       |✓                          |◐                   |
+|Reticulum / LXMF|✓              |◐        |◐                  |✗                       |✓                          |✓                   |
+|NNCP            |✓              |✗        |◐                  |✗                       |✓                          |✓                   |
+|Syncthing       |✓              |✗        |✗                  |✗                       |◐                          |◐                   |
+|Winlink         |✗              |✗        |✗                  |✗                       |◐                          |✓                   |
+
+✓ designed to provide it · ◐ partial, conditional, or configuration-dependent · ✗ generally not provided · N/A not meaningfully applicable
+
+The conditional cells, from each project's own documentation. **Psiphon** is an encrypted proxy, not a messenger: traffic is protected to Psiphon's servers, not end-to-end, and its own FAQ sends users who need anonymity to Tor instead. **Ricochet Refresh** has no offline delivery by design — both parties must be online — and blocking resistance is only whatever the underlying Tor configuration provides; **Cwtch** delivers to offline recipients only through opt-in groups hosted on untrusted servers. **Briar** ships Tor bridge support enabled automatically by location, but local Bluetooth/Wi-Fi sync only reaches contacts within radio range, and delivery to offline contacts needs the optional Briar Mailbox on a spare device.
+
+**Bitchat** encrypts private messages end-to-end (Noise protocol) but is young and unaudited, and its whitepaper states plainly that a nearby Bluetooth observer can track a device across time and place. **Meshtastic** channel encryption defaults to a well-known shared key, direct messages gained per-node public-key encryption only in firmware 2.5, and its store-and-forward module is optional and needs dedicated hardware. **Reticulum** packets carry no source address ("initiator anonymity"), but the project claims no resistance to radio-layer traffic analysis; store-and-forward comes from LXMF propagation nodes.
+
+**NNCP** onion-encrypts relayed packets, though each hop sees its neighbors' node IDs; its documented censorship bypass works by avoiding the internet entirely, which this table counts under infrastructure independence. **Syncthing** works fully on an isolated LAN, but the default public discovery and relay operators can see which devices connect, and store-and-forward through an intermediate device requires the beta untrusted-device mode. **Winlink** is the deliberate opposite of private — amateur radio rules forbid encryption and require call signs — and its radio-only mode, which avoids internet gateways, is not the default.
 
 ## Protocols and Networking Stacks
 *Protocols and building blocks for networks that tolerate disruption, partitioning, and hostile filtering.*
