@@ -75,10 +75,10 @@ Tools in the censorship-circumvention sections need a working internet path and 
 - [B.A.T.M.A.N. Advanced](https://www.open-mesh.org/projects/batman-adv/wiki) - Layer-2 mesh routing in the Linux kernel and the backbone of many community wireless networks; provides no encryption of its own.
 - [Babel](https://www.irif.fr/~jch/software/babel/) - Loop-avoiding distance-vector routing protocol (RFC 8966) that behaves well on lossy wireless links; also implemented in FRRouting.
 - [BMX7](https://github.com/bmx-routing/bmx7) - Mesh routing protocol with trust- and reputation-aware path selection (SEMTOR). **Dormant**
-- [cjdns](https://github.com/cjdelisle/cjdns) - Encrypted IPv6 overlay and mesh network with addresses derived from public keys; runs over the internet or directly over local links. No known independent audit.
+- [cjdns](https://github.com/cjdelisle/cjdns) - Encrypted IPv6 overlay and mesh network with addresses derived from public keys; runs over the internet or directly over local links.
 - [olsrd](https://github.com/OLSR/olsrd) - Implementation of the OLSR link-state MANET routing protocol (RFC 3626), deployed in community networks for two decades.
-- [Reticulum](https://reticulum.network/) - Cryptography-first networking stack that runs over LoRa, packet radio, Wi-Fi, or IP, built for very low bandwidth and zero infrastructure, with the LXMF store-and-forward messaging layer on top. Not externally audited (self-disclosed); released under a custom non-OSI license with field-of-use restrictions.
-- [Yggdrasil](https://yggdrasil-network.github.io/) - Encrypted IPv6 overlay with scalable spanning-tree routing that can also mesh over local peer discovery; self-described as experimental, no known independent audit.
+- [Reticulum](https://reticulum.network/) - Cryptography-first networking stack that runs over LoRa, packet radio, Wi-Fi, or IP, built for very low bandwidth and zero infrastructure, with the LXMF store-and-forward messaging layer on top. Released under a custom non-OSI license with field-of-use restrictions.
+- [Yggdrasil](https://yggdrasil-network.github.io/) - Encrypted IPv6 overlay with scalable spanning-tree routing that can also mesh over local peer discovery; self-described as experimental.
 
 ### Amateur Radio Protocols
 *Transmitting requires an amateur radio license, and encryption is prohibited on amateur bands in most jurisdictions — these provide availability, not confidentiality.*
@@ -95,12 +95,12 @@ Tools in the censorship-circumvention sections need a working internet path and 
 - [meek](https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/meek) - Domain-fronting transport that hides the true destination behind large CDNs; mostly defunct since major clouds disabled fronting. **Dormant**
 - [Shadowsocks](https://github.com/shadowsocks/shadowsocks-rust) - Encrypted proxy protocol designed to look like random bytes, very widely deployed for over a decade; researchers have documented active-probing and entropy-based detection of it by the Great Firewall.
 - [Snowflake](https://snowflake.torproject.org/) - Routes censored users through ephemeral volunteer WebRTC proxies running in ordinary browsers, making IP blocking costly for the censor.
-- [Xray-core](https://github.com/XTLS/Xray-core) - Modular proxy platform (VLESS, VMess, Trojan) that camouflages traffic as ordinary HTTPS; the most active branch of the V2Ray ecosystem. No known independent audit.
+- [Xray-core](https://github.com/XTLS/Xray-core) - Modular proxy platform (VLESS, VMess, Trojan) that camouflages traffic as ordinary HTTPS; the most active branch of the V2Ray ecosystem.
 
 ### Anonymity Networks
 *Anonymity and availability are different goals: all of these require a reachable internet.*
 
-- [I2P](https://geti2p.net/) - Decentralized garlic-routing overlay for hidden services and peer-to-peer applications; no known independent code audit, and recent academic work documents design weaknesses across its implementations.
+- [I2P](https://geti2p.net/) - Decentralized garlic-routing overlay for hidden services and peer-to-peer applications; recent academic work documents design weaknesses across its implementations.
 - [Katzenpost](https://katzenpost.network/) - Mix network in the Loopix lineage providing metadata resistance without any token dependency; research-grade software with a small test network. **Experimental**
 - [Tor](https://www.torproject.org/) - Onion-routing anonymity network, the base for onion services and the pluggable-transport ecosystem; repeatedly audited (most recently Cure53, 2023) with a publicly tracked vulnerability history.
 
@@ -108,13 +108,13 @@ Tools in the censorship-circumvention sections need a working internet path and 
 *End-user tools. Entries state what infrastructure each one actually needs.*
 
 ### Off-Grid and Local Messaging
-- [Bitchat](https://github.com/permissionlesstech/bitchat) - Bluetooth LE mesh chat for iOS/macOS with no accounts or servers, widely adopted since its 2025 launch; it has had no security review, its developer warns against relying on it, and researchers reported an impersonation flaw at launch.
+- [Bitchat](https://github.com/permissionlesstech/bitchat) - Bluetooth LE mesh chat for iOS/macOS with no accounts or servers, widely adopted since its 2025 launch; its developer warns against relying on it for security, and researchers reported an impersonation flaw at launch.
 - [Briar](https://briarproject.org/) - Messenger that syncs over Tor when the internet works and over Bluetooth or Wi-Fi when it does not; relays only between mutual contacts, not strangers. Audited by Cure53 (2017).
 - [Meshenger](https://github.com/meshenger-app/meshenger-android) - Serverless voice and video calls over the local network, usable on community mesh networks with no internet at all.
-- [qaul](https://qaul.net/) - Internet-independent mesh messenger using Bluetooth LE, Wi-Fi Direct, and LAN simultaneously, with store-and-forward delivery. No known independent audit.
+- [qaul](https://qaul.net/) - Internet-independent mesh messenger using Bluetooth LE, Wi-Fi Direct, and LAN simultaneously, with store-and-forward delivery.
 
 ### Anonymous and Metadata-Resistant Messaging
-- [Cwtch](https://cwtch.im/) - Metadata-resistant group messenger built on Tor onion services, with untrusted relay servers for offline delivery. No known independent audit.
+- [Cwtch](https://cwtch.im/) - Metadata-resistant group messenger built on Tor onion services, with untrusted relay servers for offline delivery.
 - [Ricochet-Refresh](https://www.ricochetrefresh.net/) - Maintained fork of Ricochet in which every user is a Tor onion service, leaving no server-side metadata; the original was audited by NCC Group (2016), before the v3 onion migration.
 
 ### Censorship Circumvention and Tool Distribution
@@ -126,7 +126,7 @@ Tools in the censorship-circumvention sections need a working internet path and 
 ### Offline Data Sync and Content Distribution
 - [Kiwix](https://kiwix.org/) - Serves compressed offline copies of Wikipedia and other reference content from a laptop or Raspberry Pi hotspot; used by schools, libraries, and disaster responders worldwide.
 - [NNCP](http://www.nncpgo.org/) - Encrypted store-and-forward file and mail exchange between trusted nodes over TCP, removable media, or one-way links; a modern UUCP successor built for air gaps and sneakernets.
-- [Syncthing](https://syncthing.net/) - Decentralized file synchronization that works fully on a LAN with no internet; relay and discovery servers are optional and self-hostable. Despite common claims, no independent audit is documented.
+- [Syncthing](https://syncthing.net/) - Decentralized file synchronization that works fully on a LAN with no internet; relay and discovery servers are optional and self-hostable.
 
 ### Local-First Publishing
 - [Manyverse](https://www.manyver.se/) - Client for Secure Scuttlebutt, an offline-first gossip protocol that syncs social feeds over LAN or internet; content can be encrypted, but the social graph and metadata are public by design. **Dormant**
@@ -154,7 +154,7 @@ Tools in the censorship-circumvention sections need a working internet path and 
 
 ### LoRa Mesh
 - [MeshCore](https://github.com/meshcore-dev/MeshCore) - Lightweight LoRa mesh firmware with hybrid flood and path-based routing, a lower-overhead alternative to Meshtastic.
-- [Meshtastic](https://meshtastic.org/) - The most widely used open LoRa mesh firmware and companion apps for off-grid text and location sharing; channel encryption uses shared keys with a well-known default, and key-generation flaws have received CVEs (CVE-2025-52464) — no independent audit.
+- [Meshtastic](https://meshtastic.org/) - The most widely used open LoRa mesh firmware and companion apps for off-grid text and location sharing; channel encryption uses shared keys with a well-known default, and key-generation flaws have received CVEs (CVE-2025-52464).
 - [RNode Firmware CE](https://github.com/liberatedsystems/RNode_Firmware_CE) - Community-maintained firmware that turns common LoRa boards into open long-range radio modems, primarily as the physical layer for Reticulum.
 
 ### Mesh Router Firmware
