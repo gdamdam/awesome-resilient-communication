@@ -237,6 +237,7 @@ Deep dives into single technologies covered here only at the level of their resi
 - [awesome-local-first](https://github.com/schickling/awesome-local-first) - Offline-first software architecture: CRDTs and sync engines.
 - [awesome-meshcore](https://github.com/samuk/awesome-meshcore) - The MeshCore ecosystem.
 - [awesome-meshtastic](https://github.com/ShakataGaNai/awesome-meshtastic) - The Meshtastic ecosystem: hardware, apps, communities.
+- [awesome-offline-knowledge](https://github.com/gdamdam/awesome-offline-knowledge) - This list's sibling: keeping knowledge accessible without the internet.
 - [awesome-privacy](https://github.com/Lissy93/awesome-privacy) - Privacy-respecting software, including encrypted messengers.
 - [awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted) - Self-hosted server software, including communication systems.
 
