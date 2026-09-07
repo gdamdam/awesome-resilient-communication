@@ -64,9 +64,20 @@ No single tool covers all six — the Resilience at a Glance matrix below shows 
 - [Contributors](#contributors)
 
 ## Resilience at a Glance
-A few representative entries — deliberately not all of them — classified against the six properties above, to show how differently "resilient" tools spread their effort. The six properties cluster into two broad design goals. Tools built for **hostile but functioning networks** — confidentiality, anonymity, metadata resistance, censorship circumvention — assume the internet works and an adversary watches or filters it; Tor-based messengers live here. Tools built for **broken, absent, or intermittent networks** — infrastructure independence, disruption tolerance — assume connectivity itself has failed; mesh radio and store-and-forward systems live here. The two groups are not exclusive: Briar deliberately spans both, and Reticulum brings strong encryption to infrastructure-free links.
+A few representative entries — deliberately not all of them — classified against the six properties above, to show how differently "resilient" tools spread their effort. The six properties cluster into two broad design goals:
 
-Read the matrix by failure mode, not as a ranking: internet fully down → *infrastructure independence*; internet up but filtered → *censorship circumvention*; connectivity intermittent → *disruption tolerance*. A ✗ usually means a system never set out to provide that property, and a ✓ marks a design goal, not a security guarantee — the audit caveat above applies to every cell. Rows run from hostile-network tools to broken-network tools.
+- **Hostile but functioning networks** — confidentiality, anonymity, metadata resistance, censorship circumvention. The internet works, but an adversary watches or filters it; Tor-based messengers live here.
+- **Broken, absent, or intermittent networks** — infrastructure independence, disruption tolerance. Connectivity itself has failed; mesh radio and store-and-forward systems live here.
+
+The two groups are not exclusive: Briar deliberately spans both, and Reticulum brings strong encryption to infrastructure-free links.
+
+Read the matrix by failure mode, not as a ranking — rows run from hostile-network tools to broken-network tools:
+
+- Internet fully down → *infrastructure independence*
+- Internet up but filtered → *censorship circumvention*
+- Connectivity intermittent → *disruption tolerance*
+
+A ✗ usually means a system never set out to provide that property, and a ✓ marks a design goal, not a security guarantee — the audit caveat above applies to every cell.
 
 |System          |Confidentiality|Anonymity|Metadata resistance|Censorship circumvention|Infrastructure independence|Disruption tolerance|
 |----------------|---------------|---------|-------------------|------------------------|---------------------------|--------------------|
