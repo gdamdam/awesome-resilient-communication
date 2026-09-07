@@ -84,11 +84,18 @@ Read the matrix by failure mode, not as a ranking: internet fully down → *infr
 
 ✓ designed to provide it · ◐ partial, conditional, or configuration-dependent · ✗ generally not provided · N/A not meaningfully applicable
 
-The conditional cells, from each project's own documentation. **Psiphon** is an encrypted proxy, not a messenger: traffic is protected to Psiphon's servers, not end-to-end, and its own FAQ sends users who need anonymity to Tor instead. **Ricochet Refresh** has no offline delivery by design — both parties must be online — and blocking resistance is only whatever the underlying Tor configuration provides; **Cwtch** delivers to offline recipients only through opt-in groups hosted on untrusted servers. **Briar** ships Tor bridge support enabled automatically by location, but local Bluetooth/Wi-Fi sync only reaches contacts within radio range, and delivery to offline contacts needs the optional Briar Mailbox on a spare device.
+The conditional cells, from each project's own documentation:
 
-**Bitchat** encrypts private messages end-to-end (Noise protocol) but is young and unaudited, and its whitepaper states plainly that a nearby Bluetooth observer can track a device across time and place. **Meshtastic** channel encryption defaults to a well-known shared key, direct messages gained per-node public-key encryption only in firmware 2.5, and its store-and-forward module is optional and needs dedicated hardware. **Reticulum** packets carry no source address ("initiator anonymity"), but the project claims no resistance to radio-layer traffic analysis; store-and-forward comes from LXMF propagation nodes.
-
-**NNCP** onion-encrypts relayed packets, though each hop sees its neighbors' node IDs; its documented censorship bypass works by avoiding the internet entirely, which this table counts under infrastructure independence. **Syncthing** works fully on an isolated LAN, but the default public discovery and relay operators can see which devices connect, and store-and-forward through an intermediate device requires the beta untrusted-device mode. **Winlink** is the deliberate opposite of private — amateur radio rules forbid encryption and require call signs — and its radio-only mode, which avoids internet gateways, is not the default.
+- **Psiphon** — an encrypted proxy, not a messenger: traffic is protected to Psiphon's servers, not end-to-end, and its own FAQ sends users who need anonymity to Tor instead.
+- **Ricochet Refresh** — no offline delivery by design (both parties must be online), and blocking resistance is only whatever the underlying Tor configuration provides.
+- **Cwtch** — delivers to offline recipients only through opt-in groups hosted on untrusted servers.
+- **Briar** — ships Tor bridge support enabled automatically by location, but local Bluetooth/Wi-Fi sync only reaches contacts within radio range, and delivery to offline contacts needs the optional Briar Mailbox on a spare device.
+- **Bitchat** — encrypts private messages end-to-end (Noise protocol) but is young and unaudited, and its whitepaper states plainly that a nearby Bluetooth observer can track a device across time and place.
+- **Meshtastic** — channel encryption defaults to a well-known shared key, direct messages gained per-node public-key encryption only in firmware 2.5, and its store-and-forward module is optional and needs dedicated hardware.
+- **Reticulum** — packets carry no source address ("initiator anonymity"), but the project claims no resistance to radio-layer traffic analysis; store-and-forward comes from LXMF propagation nodes.
+- **NNCP** — onion-encrypts relayed packets, though each hop sees its neighbors' node IDs; its documented censorship bypass works by avoiding the internet entirely, which this table counts under infrastructure independence.
+- **Syncthing** — works fully on an isolated LAN, but the default public discovery and relay operators can see which devices connect, and store-and-forward through an intermediate device requires the beta untrusted-device mode.
+- **Winlink** — the deliberate opposite of private: amateur radio rules forbid encryption and require call signs, and its radio-only mode, which avoids internet gateways, is not the default.
 
 ## Protocols and Networking Stacks
 *Protocols and building blocks for networks that tolerate disruption, partitioning, and hostile filtering.*
