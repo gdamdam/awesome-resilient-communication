@@ -2,7 +2,7 @@
 
 A curated list of open protocols, applications, hardware, and resources for communication during internet shutdowns, disasters, censorship, and off-grid operation.
 
-**Scope.** This list is about *resilient communication*: technologies that keep people able to exchange messages, files, and situational information when normal infrastructure is unavailable, degraded, or hostile. Every software entry has a working open-source implementation; resilience must be part of the architecture, not a marketing claim.
+**Scope.** This list is about *resilient communication*: technologies that keep people able to exchange messages, files, and situational information when normal infrastructure is unavailable, degraded, or hostile. Every software entry has a working open-source implementation, except a few explicitly flagged projects whose source is available under non-OSI terms; resilience must be part of the architecture, not a marketing claim.
 
 **Out of scope:**
 - Cryptocurrency- and token-dependent projects, even connectivity-themed ones.
@@ -53,6 +53,7 @@ No single tool covers all six — the Resilience at a Glance matrix below shows 
   - [Community Networks](#community-networks)
   - [Community Cellular and Rural Connectivity](#community-cellular-and-rural-connectivity)
   - [Emergency Radio Networks](#emergency-radio-networks)
+  - [Legacy but Operational Networks](#legacy-but-operational-networks)
   - [Case Studies](#case-studies)
 - [Measurement and Monitoring](#measurement-and-monitoring)
 - [Prepare Before You Need It](#prepare-before-you-need-it)
@@ -66,8 +67,8 @@ No single tool covers all six — the Resilience at a Glance matrix below shows 
 ## Resilience at a Glance
 A few representative entries — deliberately not all of them — classified against the six properties above, to show how differently "resilient" tools spread their effort. The six properties cluster into two broad design goals:
 
-- **Hostile but functioning networks** — confidentiality, anonymity, metadata resistance, censorship circumvention. The internet works, but an adversary watches or filters it; Tor-based messengers live here.
-- **Broken, absent, or intermittent networks** — infrastructure independence, disruption tolerance. Connectivity itself has failed; mesh radio and store-and-forward systems live here.
+- Hostile but functioning networks — confidentiality, anonymity, metadata resistance, censorship circumvention. The internet works, but an adversary watches or filters it; Tor-based messengers live here.
+- Broken, absent, or intermittent networks — infrastructure independence, disruption tolerance. Connectivity itself has failed; mesh radio and store-and-forward systems live here.
 
 The two groups are not exclusive: Briar deliberately spans both, and Reticulum brings strong encryption to infrastructure-free links.
 
@@ -97,16 +98,16 @@ A ✗ usually means a system never set out to provide that property, and a ✓ m
 
 The conditional cells, from each project's own documentation:
 
-- **Psiphon** — an encrypted proxy, not a messenger: traffic is protected to Psiphon's servers, not end-to-end, and its own FAQ sends users who need anonymity to Tor instead.
-- **Ricochet Refresh** — no offline delivery by design (both parties must be online), and blocking resistance is only whatever the underlying Tor configuration provides.
-- **Cwtch** — delivers to offline recipients only through opt-in groups hosted on untrusted servers.
-- **Briar** — ships Tor bridge support enabled automatically by location, but local Bluetooth/Wi-Fi sync only reaches contacts within radio range, and delivery to offline contacts needs the optional Briar Mailbox on a spare device.
-- **Bitchat** — encrypts private messages end-to-end (Noise protocol) but is young and unaudited, and its whitepaper states plainly that a nearby Bluetooth observer can track a device across time and place.
-- **Meshtastic** — channel encryption defaults to a well-known shared key, direct messages gained per-node public-key encryption only in firmware 2.5, and its store-and-forward module is optional and needs dedicated hardware.
-- **Reticulum** — packets carry no source address ("initiator anonymity"), but the project claims no resistance to radio-layer traffic analysis; store-and-forward comes from LXMF propagation nodes.
-- **NNCP** — onion-encrypts relayed packets, though each hop sees its neighbors' node IDs; its documented censorship bypass works by avoiding the internet entirely, which this table counts under infrastructure independence.
-- **Syncthing** — works fully on an isolated LAN, but the default public discovery and relay operators can see which devices connect, and store-and-forward through an intermediate device requires the beta untrusted-device mode.
-- **Winlink** — the deliberate opposite of private: amateur radio rules forbid encryption and require call signs, and its radio-only mode, which avoids internet gateways, is not the default.
+- Psiphon — an encrypted proxy, not a messenger: traffic is protected to Psiphon's servers, not end-to-end, and its own FAQ sends users who need anonymity to Tor instead.
+- Ricochet Refresh — no offline delivery by design (both parties must be online), and blocking resistance is only whatever the underlying Tor configuration provides.
+- Cwtch — delivers to offline recipients only through opt-in groups hosted on untrusted servers.
+- Briar — ships Tor bridge support enabled automatically by location, but local Bluetooth/Wi-Fi sync only reaches contacts within radio range, and delivery to offline contacts needs the optional Briar Mailbox on a spare device.
+- Bitchat — encrypts private messages end-to-end (Noise protocol) but is young and unaudited, and its whitepaper states plainly that a nearby Bluetooth observer can track a device across time and place.
+- Meshtastic — channel encryption defaults to a well-known shared key, direct messages gained per-node public-key encryption only in firmware 2.5, and its store-and-forward module is optional and needs dedicated hardware.
+- Reticulum — packets carry no source address ("initiator anonymity"), but the project claims no resistance to radio-layer traffic analysis; store-and-forward comes from LXMF propagation nodes.
+- NNCP — onion-encrypts relayed packets, though each hop sees its neighbors' node IDs; its documented censorship bypass works by avoiding the internet entirely, which this table counts under infrastructure independence.
+- Syncthing — works fully on an isolated LAN, but the default public discovery and relay operators can see which devices connect, and store-and-forward through an intermediate device requires the beta untrusted-device mode.
+- Winlink — the deliberate opposite of private: amateur radio rules forbid encryption and require call signs, and its radio-only mode, which avoids internet gateways, is not the default.
 
 ## Protocols and Networking Stacks
 *Protocols and building blocks for networks that tolerate disruption, partitioning, and hostile filtering.*
@@ -228,6 +229,9 @@ The conditional cells, from each project's own documentation:
 ### Emergency Radio Networks
 - [Winlink](https://winlink.org/) - Global volunteer-run email-over-radio network used in real disaster response; a fully open path exists via Pat and ARDOP, while the official client and the fastest modems (VARA, PACTOR) are proprietary.
 
+### Legacy but Operational Networks
+- [FidoNet](https://en.wikipedia.org/wiki/FidoNet) - The 1980s–90s global store-and-forward BBS network and a conceptual ancestor of DTN; long past its peak but still operational, with a nodelist updated weekly and on the order of a thousand active nodes.
+
 ### Case Studies
 - [Breaking Bridgefy, Again](https://www.usenix.org/conference/usenixsecurity22/presentation/albrecht) - USENIX Security 2022 paper showing the protest-marketed Bridgefy mesh app remained insecure even after adopting the Signal protocol library — a cautionary tale for any crisis-marketed messenger.
 - [FireChat and the 2014 Hong Kong protests](https://globalvoices.org/2015/01/13/fact-checking-firechat-mesh-networks-coverage-hong-kong-protests/) - Fact-check showing the widely reported "mesh app powered the protests" story had almost no evidence of actual offline mesh usage.
@@ -241,13 +245,13 @@ The conditional cells, from each project's own documentation:
 - [OONI Probe](https://ooni.org/) - Volunteer-run network tests documenting censorship since 2012, with open data from more than 200 countries.
 
 ## Prepare Before You Need It
-Nearly everything on this list shares one failure mode: it only works if it was set up **before** the outage. App stores are unreachable during a shutdown — [F-Droid Nearby](https://f-droid.org/en/tutorials/swap/) can spread APKs device-to-device afterwards, but only from someone who downloaded them in time. And the logic runs deeper than installation:
+Nearly everything on this list shares one failure mode: it only works if it was set up **before** the outage. App stores are unreachable during a shutdown — F-Droid Nearby, listed above, can spread APKs device-to-device afterwards, but only from someone who downloaded them in time. And the logic runs deeper than installation:
 
-- **Contacts and keys** — Briar contacts must be exchanged while a channel still exists, and its Mailbox needs a spare device configured in advance.
-- **Circumvention channels** — Tor bridge addresses and Psiphon builds are easiest to obtain before censorship intensifies; that is the entire reason rdsys distributes bridges through multiple independent channels.
-- **Hardware** — LoRa mesh requires radios bought, flashed, and key-exchanged ahead of time, and a first field test during a disaster is a bad field test.
-- **Skills and licenses** — amateur radio is the extreme case: the license takes weeks, and the operating skill that makes emergency nets work comes from participating in them routinely.
-- **Reference material** — offline maps, medical guides, and Wikipedia dumps for Kiwix (tens of gigabytes, not a download to start on a degraded network) are a different discipline, catalogued in the sibling list [awesome-offline-knowledge](https://github.com/gdamdam/awesome-offline-knowledge).
+- Contacts and keys — Briar contacts must be exchanged while a channel still exists, and its Mailbox needs a spare device configured in advance.
+- Circumvention channels — Tor bridge addresses and Psiphon builds are easiest to obtain before censorship intensifies; that is the entire reason rdsys distributes bridges through multiple independent channels.
+- Hardware — LoRa mesh requires radios bought, flashed, and key-exchanged ahead of time, and a first field test during a disaster is a bad field test.
+- Skills and licenses — amateur radio is the extreme case: the license takes weeks, and the operating skill that makes emergency nets work comes from participating in them routinely.
+- Reference material — offline maps, medical guides, and Wikipedia dumps for Kiwix (tens of gigabytes, not a download to start on a degraded network) are a different discipline, catalogued in the sibling list awesome-offline-knowledge under Other Related Lists below.
 
 A reasonable minimum: pick one tool from each failure mode in the matrix above, install it, exchange keys or contacts with the people you'd actually need to reach, and test it once with the internet turned off.
 
@@ -274,7 +278,6 @@ A reasonable minimum: pick one tool from each failure mode in the matrix above, 
 - [Byzantium Linux](https://github.com/Byzantium/Byzantium) - Bootable live distribution that turned any laptop into a mesh node with zero configuration. **Discontinued!**
 - [Commotion Wireless](https://github.com/opentechinstitute/commotion-router) - State-Department-funded mesh firmware from the Arab Spring era; its Red Hook offshoot in Brooklyn survived Hurricane Sandy. **Discontinued!**
 - [disaster.radio](https://github.com/sudomesh/disaster-radio) - Solar-powered LoRa mesh for post-disaster networking; its maintainers point to Meshtastic and Reticulum as successors. **Discontinued!**
-- [FidoNet](https://en.wikipedia.org/wiki/FidoNet) - The 1980s–90s global store-and-forward BBS network and a conceptual ancestor of DTN; still run by hobbyists at a tiny scale. **Discontinued!**
 - [OpenCellular](https://github.com/Telecominfraproject/OpenCellular) - Facebook's open cellular base-station platform; stewardship passed to the Telecom Infra Project and stalled. **Discontinued!**
 - [PirateBox](https://github.com/PirateBox-Dev/PirateBoxScripts_Webserver) - Offline Wi-Fi box for anonymous local file sharing that seeded a whole genre; see ShareBoxx for a maintained successor. **Discontinued!**
 - [Serval Project](https://github.com/servalproject/serval-dna) - Pioneering disaster mesh telephony for Android whose Rhizome store-and-forward design remains influential; unmaintained since about 2022. **Discontinued!**
