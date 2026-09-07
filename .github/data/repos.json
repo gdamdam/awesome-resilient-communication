@@ -32,7 +32,7 @@
   "Lyrebird": {"exempt": "canonical repository on gitlab.torproject.org"},
   "M17": {"exempt": "multi-repository GitHub organization (M17-Project)"},
   "Magma": "magma/magma",
-  "Manyverse": "staltz/manyverse",
+  "Manyverse": {"exempt": "developed at gitlab.com/staltz/manyverse; the GitHub repository is a stale mirror"},
   "Meshtastic": "meshtastic/firmware",
   "NNCP": {"exempt": "canonical repository self-hosted at git.cypherpunks.ru"},
   "NYC Mesh": {"exempt": "community network, not a software project"},

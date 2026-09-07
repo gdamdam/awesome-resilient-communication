@@ -148,7 +148,7 @@ The conditional cells, from each project's own documentation:
 ### Anonymity Networks
 *Anonymity and availability are different goals: all of these require a reachable internet.*
 
-- [I2P](https://geti2p.net/) - Decentralized garlic-routing overlay for hidden services and peer-to-peer applications; recent academic work documents design weaknesses across its implementations.
+- [I2P](https://i2p.net/) - Decentralized garlic-routing overlay for hidden services and peer-to-peer applications; recent academic work documents design weaknesses across its implementations.
 - [Katzenpost](https://katzenpost.network/) - Mix network in the Loopix lineage providing metadata resistance without any token dependency; research-grade software with a small test network. **Experimental**
 - [Tor](https://www.torproject.org/) - Onion-routing anonymity network, the base for onion services and the pluggable-transport ecosystem; repeatedly audited (most recently Cure53, 2023) with a publicly tracked vulnerability history.
 
@@ -177,7 +177,7 @@ The conditional cells, from each project's own documentation:
 - [Syncthing](https://syncthing.net/) - Decentralized file synchronization that works fully on a LAN with no internet; relay and discovery servers are optional and self-hostable.
 
 ### Local-First Publishing
-- [Manyverse](https://www.manyver.se/) - Client for Secure Scuttlebutt, an offline-first gossip protocol that syncs social feeds over LAN or internet; content can be encrypted, but the social graph and metadata are public by design. **Dormant**
+- [Manyverse](https://www.manyver.se/) - Client for Secure Scuttlebutt, an offline-first gossip protocol that syncs social feeds over LAN or internet; content can be encrypted, but the social graph and metadata are public by design.
 - [ShareBoxx](https://github.com/dividebysandwich/shareboxx) - Rust reimplementation of the PirateBox concept: a standalone offline Wi-Fi box for anonymous local file sharing and chat. **Experimental**
 
 ### Emergency Coordination
