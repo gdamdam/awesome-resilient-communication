@@ -164,6 +164,7 @@ The conditional cells, from each project's own documentation:
 - [Bitchat](https://github.com/permissionlesstech/bitchat) - Bluetooth LE mesh chat for iOS/macOS with no accounts or servers, widely adopted since its 2025 launch; its developer warns against relying on it for security, and researchers reported an impersonation flaw at launch.
 - [Briar](https://briarproject.org/) - Messenger that syncs over Tor when the internet works and over Bluetooth or Wi-Fi when it does not; relays only between mutual contacts, not strangers. Audited by Cure53 (2017).
 - [Columba](https://github.com/torlando-tech/columba) - Android messaging and voice client for the Reticulum network (LXMF/LXST) that connects over Bluetooth LE, Wi-Fi/TCP, or LoRa via RNode radios, and can bridge those interfaces so a local Bluetooth mesh extends across LAN or internet links; MPL-2.0, Android-only, still in beta. **Experimental**
+- [Meshenger](https://github.com/meshenger-app/meshenger-android) - Serverless voice and video calls over the local network, usable on community mesh networks with no internet at all.
 - [qaul](https://qaul.net/) - Internet-independent mesh messenger using Bluetooth LE, Wi-Fi Direct, and LAN simultaneously, with store-and-forward delivery.
 
 ### Anonymous and Metadata-Resistant Messaging
