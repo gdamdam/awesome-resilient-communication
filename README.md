@@ -26,7 +26,12 @@ Entries marked **Dormant** still work but have seen no meaningful development fo
 
 No single tool covers all six — the Resilience at a Glance matrix below shows how representative tools spread their effort across them.
 
-**Inclusion is not a security endorsement.** Assume a project has had *no* independent security audit unless the entry names one. If your safety depends on a tool, evaluate your own threat model first — EFF's Surveillance Self-Defense, listed under Guides and Threat Models below, is a good starting point — and prefer audited tools with documented limitations over impressive claims. Audit citations, encryption defaults, and metadata notes throughout this list were last verified against project documentation in September 2026; treat them as snapshots and check upstream before relying on them.
+**Inclusion is not a security endorsement.**
+
+- Assume a project has had *no* independent security audit unless the entry names one.
+- If your safety depends on a tool, evaluate your own threat model first; EFF's Surveillance Self-Defense, listed under Guides and Threat Models below, is a good starting point.
+- Prefer audited tools with documented limitations over impressive claims.
+- Audit citations, encryption defaults, and metadata notes were last verified against project documentation in September 2026 — treat them as snapshots and check upstream before relying on them.
 
 ## Contents
 
