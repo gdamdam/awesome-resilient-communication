@@ -202,7 +202,7 @@ The conditional cells, from each project's own documentation:
 
 ### LoRa Mesh
 - [MeshCore](https://github.com/meshcore-dev/MeshCore) - Lightweight LoRa mesh firmware with hybrid flood and path-based routing, a lower-overhead alternative to Meshtastic.
-- [Meshtastic](https://meshtastic.org/) - The most widely used open LoRa mesh firmware and companion apps for off-grid text and location sharing; channel encryption uses shared keys with a well-known default, and key-generation flaws have received CVEs (CVE-2025-52464).
+- [Meshtastic](https://meshtastic.org/) - The most widely used open LoRa mesh firmware and companion apps for off-grid text and location sharing; channel encryption defaults to a well-known shared key, though private channels with custom keys and (since firmware 2.5) public-key-encrypted direct messages are supported, and key-generation flaws have received CVEs (CVE-2025-52464).
 - [RNode Firmware CE](https://github.com/liberatedsystems/RNode_Firmware_CE) - Community-maintained firmware that turns common LoRa boards into open long-range radio modems, primarily as the physical layer for Reticulum.
 
 ### Mesh Router Firmware
