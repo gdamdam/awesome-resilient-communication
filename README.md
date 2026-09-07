@@ -26,7 +26,7 @@ Entries marked **Dormant** still work but have seen no meaningful development fo
 
 No single tool covers all six — the Resilience at a Glance matrix below shows how representative tools spread their effort across them.
 
-**Inclusion is not a security endorsement.** Assume a project has had *no* independent security audit unless the entry names one. If your safety depends on a tool, evaluate your own threat model first — EFF's Surveillance Self-Defense, listed under Guides and Threat Models below, is a good starting point — and prefer audited tools with documented limitations over impressive claims.
+**Inclusion is not a security endorsement.** Assume a project has had *no* independent security audit unless the entry names one. If your safety depends on a tool, evaluate your own threat model first — EFF's Surveillance Self-Defense, listed under Guides and Threat Models below, is a good starting point — and prefer audited tools with documented limitations over impressive claims. Audit citations, encryption defaults, and metadata notes throughout this list were last verified against project documentation in September 2026; treat them as snapshots and check upstream before relying on them.
 
 ## Contents
 
@@ -230,7 +230,7 @@ The conditional cells, from each project's own documentation:
 - [Winlink](https://winlink.org/) - Global volunteer-run email-over-radio network used in real disaster response; a fully open path exists via Pat and ARDOP, while the official client and the fastest modems (VARA, PACTOR) are proprietary.
 
 ### Legacy but Operational Networks
-- [FidoNet](https://en.wikipedia.org/wiki/FidoNet) - The 1980s–90s global store-and-forward BBS network and a conceptual ancestor of DTN; long past its peak but still operational, with a nodelist updated weekly and on the order of a thousand active nodes.
+- [FidoNet](https://www.fidonet.org/) - The 1980s–90s global store-and-forward BBS network and a conceptual ancestor of DTN ([history](https://en.wikipedia.org/wiki/FidoNet)); long past its peak but still operational, with a nodelist updated weekly and on the order of a thousand active nodes.
 
 ### Case Studies
 - [Breaking Bridgefy, Again](https://www.usenix.org/conference/usenixsecurity22/presentation/albrecht) - USENIX Security 2022 paper showing the protest-marketed Bridgefy mesh app remained insecure even after adopting the Signal protocol library — a cautionary tale for any crisis-marketed messenger.
@@ -253,7 +253,7 @@ Nearly everything on this list shares one failure mode: it only works if it was 
 - Skills and licenses — amateur radio is the extreme case: the license takes weeks, and the operating skill that makes emergency nets work comes from participating in them routinely.
 - Reference material — offline maps, medical guides, and Wikipedia dumps for Kiwix (tens of gigabytes, not a download to start on a degraded network) are a different discipline, catalogued in the sibling list awesome-offline-knowledge under Other Related Lists below.
 
-A reasonable minimum: pick one tool from each failure mode in the matrix above, install it, exchange keys or contacts with the people you'd actually need to reach, and test it once with the internet turned off.
+A reasonable minimum: choose the failure modes relevant to you, pick at least one suitable tool for each, and provision contacts, keys, hardware, and permissions in advance. Then test each expected condition separately — no internet, filtered internet, intermittent connectivity, central servers unreachable, limited physical range — because turning the internet off tests only the first of them.
 
 ## Guides and Threat Models
 - [EFF Surveillance Self-Defense](https://ssd.eff.org/) - Practical security guides for protesters, journalists, and other at-risk users, maintained by the Electronic Frontier Foundation.
