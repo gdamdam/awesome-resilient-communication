@@ -55,6 +55,7 @@ No single tool covers all six — the Resilience at a Glance matrix below shows 
   - [Emergency Radio Networks](#emergency-radio-networks)
   - [Case Studies](#case-studies)
 - [Measurement and Monitoring](#measurement-and-monitoring)
+- [Prepare Before You Need It](#prepare-before-you-need-it)
 - [Guides and Threat Models](#guides-and-threat-models)
 - [Organizations](#organizations)
 - [Developer Resources](#developer-resources)
@@ -220,6 +221,11 @@ The conditional cells, from each project's own documentation. **Psiphon** is an 
 - [Censored Planet](https://censoredplanet.org/) - Remote measurement platform that detects censorship worldwide without needing volunteers inside the censored network.
 - [IODA](https://ioda.inetintel.cc.gatech.edu/) - Near-real-time detection of macroscopic internet outages and shutdowns from BGP, active probing, and darknet signals; the canonical reference for confirming shutdowns.
 - [OONI Probe](https://ooni.org/) - Volunteer-run network tests documenting censorship since 2012, with open data from more than 200 countries.
+
+## Prepare Before You Need It
+Nearly everything on this list shares one failure mode: it only works if it was set up **before** the outage. App stores are unreachable during a shutdown, so the tools themselves must already be on the device — [F-Droid Nearby](https://f-droid.org/en/tutorials/swap/) can spread APKs device-to-device afterwards, but only from someone who downloaded them in time. The same logic runs deeper than installation. Briar contacts must be exchanged while a channel still exists, and its Mailbox needs a spare device configured in advance. Tor bridge addresses and Psiphon builds are easiest to obtain before censorship intensifies — that is the entire reason rdsys distributes bridges through multiple independent channels. LoRa mesh requires hardware bought, flashed, and key-exchanged ahead of time, and a first field test during a disaster is a bad field test. Amateur radio is the extreme case: the license takes weeks, and the operating skill that makes emergency nets work comes from participating in them routinely.
+
+Communication is also only half of preparedness. Reference material — offline maps, medical guides, repair documentation, Wikipedia dumps for Kiwix (tens of gigabytes; not a download to start when the network is already degraded) — matters just as much and is a different discipline, catalogued in the sibling list [awesome-offline-knowledge](https://github.com/gdamdam/awesome-offline-knowledge). A reasonable minimum: pick one tool from each failure mode in the matrix above, install it, exchange keys or contacts with the people you'd actually need to reach, and test it once with the internet turned off.
 
 ## Guides and Threat Models
 - [EFF Surveillance Self-Defense](https://ssd.eff.org/) - Practical security guides for protesters, journalists, and other at-risk users, maintained by the Electronic Frontier Foundation.
