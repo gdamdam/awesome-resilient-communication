@@ -14,6 +14,7 @@
   "DTN7": {"repo": "dtn7/dtn7-rs", "note": "Rust implementation; dtn7-go is the companion"},
   "EFF Surveillance Self-Defense": {"exempt": "guide website, not a software project"},
   "F-Droid Nearby": {"exempt": "canonical repository on gitlab.com/fdroid"},
+  "FidoNet": {"exempt": "volunteer-run legacy network, not a software project"},
   "FireChat and the 2014 Hong Kong protests": {"exempt": "journalism fact-check article, not a software project"},
   "Freifunk": {"exempt": "umbrella movement, no single canonical repository"},
   "Freifunk Gluon": "freifunk-gluon/gluon",
