@@ -2,38 +2,38 @@
 
 A curated list of open protocols, applications, hardware, and resources for communication during internet shutdowns, disasters, censorship, and off-grid operation.
 
-**Scope.** This list is about *resilient communication*: technologies that keep people able to exchange messages, files, and situational information when normal infrastructure is unavailable, degraded, or hostile. Every software entry has a working open-source implementation, except a few explicitly flagged projects whose source is available under non-OSI terms; resilience must be part of the architecture, not a marketing claim.
+**Scope.** Resilient communication: tools that keep people exchanging messages, files, and situational information when normal infrastructure is down, degraded, or hostile. Every software entry has a working open-source implementation (a few flagged exceptions are source-available under non-OSI terms), and resilience must be built into the architecture, not claimed in marketing.
 
 **Out of scope:**
-- Cryptocurrency- and token-dependent projects, even connectivity-themed ones.
+- Cryptocurrency- and token-dependent projects.
 - AI tools and agent frameworks.
-- Closed-source commercial products and conventional VPN services.
-- Encrypted messengers that depend on centralized infrastructure (Signal, WhatsApp and similar are excellent tools, but they stop working exactly when this list becomes relevant).
+- Closed-source products and conventional VPN services.
+- Encrypted messengers that depend on central servers. Signal and WhatsApp are excellent, but they stop working exactly when this list becomes relevant.
 - Military-only technology.
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a project.
 
-Entries marked **Dormant** still work but have seen no meaningful development for roughly 2 years; entries marked **Experimental** are promising but not yet mature enough to rely on; dead projects live in the Graveyard section at the bottom.
+**Dormant** entries still work but have seen no meaningful development for about 2 years. **Experimental** entries are promising but not yet mature enough to rely on. Dead projects are in the Graveyard at the bottom.
 
-**How to read this list.** "Resilient" is not one property. These six often get conflated:
+**How to read this list.** "Resilient" is six different properties that often get conflated:
 
-- **Confidentiality** — outsiders cannot read your messages. *(encryption)*
-- **Anonymity** — outsiders cannot tell who is communicating. *Encryption alone does not provide this.*
-- **Metadata resistance** — outsiders cannot map who talks to whom, when, or how often. *Rarer than anonymity; most "private" tools do not have it.*
-- **Censorship circumvention** — communication works despite an adversary filtering a functioning internet. *Decentralization alone does not provide this.*
-- **Infrastructure independence** — communication works with no internet, cell service, or servers at all.
-- **Disruption tolerance** — communication survives intermittent, high-latency, or partitioned links by storing and forwarding.
+- **Confidentiality**: outsiders cannot read your messages. This is what encryption gives you.
+- **Anonymity**: outsiders cannot tell who is communicating. Encryption alone does not give you this.
+- **Metadata resistance**: outsiders cannot map who talks to whom, when, or how often. Most "private" tools lack it.
+- **Censorship circumvention**: communication works on a filtered but functioning internet. Decentralization alone does not give you this.
+- **Infrastructure independence**: communication works with no internet, cell service, or servers.
+- **Disruption tolerance**: communication survives intermittent or partitioned links by storing and forwarding.
 
 No single tool covers all six. The first four matter when the internet works but is watched or filtered; the last two when connectivity itself has failed.
 
 **Inclusion is not a security endorsement.**
 
-- Assume a project has had *no* independent security audit unless the entry names one.
-- If your safety depends on a tool, evaluate your own threat model first; EFF's Surveillance Self-Defense, listed under Guides and Threat Models below, is a good starting point.
+- Assume no independent audit unless the entry names one.
+- If your safety depends on a tool, start from your own threat model. EFF's Surveillance Self-Defense, under Guides and Threat Models below, is a good starting point.
 - Prefer audited tools with documented limitations over impressive claims.
-- Audit citations, encryption defaults, and metadata notes were last verified against project documentation in September 2026 — treat them as snapshots and check upstream before relying on them.
+- Audit citations, encryption defaults, and metadata notes were last checked against project documentation in September 2026. Treat them as snapshots and check upstream.
 
-**How this list is maintained.** Inclusion, exclusion, and the criteria above are the maintainer's decisions, made by hand. AI tooling assists with drafting entry text and cross-checking licenses, audit citations, and project status; every claim is verified against the project's own documentation before it lands.
+**How this list is maintained.** Inclusion, exclusion, and the criteria above are the maintainer's decisions, made by hand. AI tooling helps draft entry text and cross-check licenses, audit citations, and project status. Every claim is verified against the project's own documentation before it lands.
 
 ## Contents
 
@@ -226,15 +226,15 @@ No single tool covers all six. The first four matter when the internet works but
 - [OONI Probe](https://ooni.org/) - Volunteer-run network tests documenting censorship since 2012, with open data from more than 200 countries.
 
 ## Prepare Before You Need It
-Nearly everything on this list shares one failure mode: it only works if it was set up **before** the outage. App stores are unreachable during a shutdown — F-Droid Nearby, listed above, can spread APKs device-to-device afterwards, but only from someone who downloaded them in time. And the logic runs deeper than installation:
+Nearly everything here shares one failure mode: it only works if it was set up before the outage. App stores are unreachable during a shutdown. F-Droid Nearby can spread apps device-to-device afterwards, but only from someone who downloaded them in time. The same applies beyond installation:
 
-- Contacts and keys — Briar contacts must be exchanged while a channel still exists, and its Mailbox needs a spare device configured in advance.
-- Circumvention channels — Tor bridge addresses and Psiphon builds are easiest to obtain before censorship intensifies; that is the entire reason rdsys distributes bridges through multiple independent channels.
-- Hardware — LoRa mesh requires radios bought, flashed, and key-exchanged ahead of time, and a first field test during a disaster is a bad field test.
-- Skills and licenses — amateur radio is the extreme case: the license takes weeks, and the operating skill that makes emergency nets work comes from participating in them routinely.
-- Reference material — offline maps, medical guides, and Wikipedia dumps for Kiwix (tens of gigabytes, not a download to start on a degraded network) are a different discipline, catalogued in the sibling list awesome-offline-knowledge under Other Related Lists below.
+- Contacts and keys: Briar contacts must be exchanged while a channel still exists, and its Mailbox needs a spare device set up in advance.
+- Circumvention channels: Tor bridges and Psiphon builds are easiest to get before censorship tightens. That is why rdsys distributes bridges through several independent channels.
+- Hardware: LoRa radios must be bought, flashed, and key-exchanged ahead of time. A first field test during a disaster is a bad field test.
+- Skills and licenses: an amateur radio license takes weeks, and the skill that makes emergency nets work comes from joining them routinely.
+- Reference material: offline maps, medical guides, and Wikipedia dumps are tens of gigabytes and a separate discipline, covered by the sibling list awesome-offline-knowledge under Other Related Lists below.
 
-A reasonable minimum: choose the failure modes relevant to you, pick at least one suitable tool for each, and provision contacts, keys, hardware, and permissions in advance. Then test each expected condition separately — no internet, filtered internet, intermittent connectivity, central servers unreachable, limited physical range — because turning the internet off tests only the first of them.
+A reasonable minimum: pick the failure modes that apply to you, choose at least one tool for each, and provision contacts, keys, hardware, and permissions in advance. Then test each condition separately: no internet, filtered internet, intermittent connectivity, servers unreachable, limited physical range. Turning the internet off tests only the first.
 
 ## Guides and Threat Models
 - [EFF Surveillance Self-Defense](https://ssd.eff.org/) - Practical security guides for protesters, journalists, and other at-risk users, maintained by the Electronic Frontier Foundation.
