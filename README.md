@@ -33,6 +33,8 @@ No single tool covers all six — the Resilience at a Glance matrix below shows 
 - Prefer audited tools with documented limitations over impressive claims.
 - Audit citations, encryption defaults, and metadata notes were last verified against project documentation in September 2026 — treat them as snapshots and check upstream before relying on them.
 
+**How this list is maintained.** Inclusion, exclusion, and the criteria above are the maintainer's decisions, made by hand. AI tooling assists with drafting entry text and cross-checking licenses, audit citations, and project status; every claim is verified against the project's own documentation before it lands.
+
 ## Contents
 
 - [Resilience at a Glance](#resilience-at-a-glance)
