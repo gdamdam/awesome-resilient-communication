@@ -33,7 +33,7 @@ No single tool covers all six. The first four matter when the internet works but
 - Prefer audited tools with documented limitations over impressive claims.
 - Audit citations, encryption defaults, and metadata notes were last checked against project documentation in September 2026. Treat them as snapshots and check upstream.
 
-**How this list is maintained.** Inclusion, exclusion, and the criteria above are the maintainer's decisions, made by hand. AI tooling helps draft entry text and cross-check licenses, audit citations, and project status. Every claim is verified against the project's own documentation before it lands.
+**How this list is maintained.** Inclusion, exclusion, and the criteria above are decided by a human maintainer, me, by hand. AI tooling helps draft entry text and cross-check licenses, audit citations, and project status. Every claim is verified against the project's own documentation before it lands.
 
 ## Contents
 
