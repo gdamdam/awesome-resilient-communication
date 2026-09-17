@@ -2,36 +2,36 @@
 
 A curated list of open protocols, applications, hardware, and resources for communication during internet shutdowns, disasters, censorship, and off-grid operation.
 
-**Scope.** Resilient communication: tools that keep people exchanging messages, files, and situational information when normal infrastructure is down, degraded, or hostile. Every software entry has a working open-source implementation (a few flagged exceptions are source-available under non-OSI terms), and resilience must be built into the architecture, not claimed in marketing.
+**Scope.** Tools that keep people exchanging messages, files, and situational information when normal infrastructure is down, degraded, or hostile. Every software entry has a working open-source implementation. A few flagged exceptions are source-available under non-OSI terms. Resilience must be in the architecture, not in the marketing.
 
 **Out of scope:**
 - Cryptocurrency- and token-dependent projects.
 - AI tools and agent frameworks.
 - Closed-source products and conventional VPN services.
-- Encrypted messengers that depend on central servers. Signal and WhatsApp are excellent, but they stop working exactly when this list becomes relevant.
+- Encrypted messengers that depend on central servers. Signal and WhatsApp are excellent, but they stop working exactly when you need this list.
 - Military-only technology.
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a project.
 
-**Dormant** entries still work but have seen no meaningful development for about 2 years. **Experimental** entries are promising but not yet mature enough to rely on. Dead projects are in the Graveyard at the bottom.
+**Dormant** entries still work but have had no real development for about 2 years. **Experimental** entries are promising but not yet ready to rely on. Dead projects are in the Graveyard at the bottom.
 
-**How to read this list.** "Resilient" is six different properties that often get conflated:
+**How to read this list.** "Resilient" means six different things that often get mixed up:
 
-- **Confidentiality**: outsiders cannot read your messages. This is what encryption gives you.
-- **Anonymity**: outsiders cannot tell who is communicating. Encryption alone does not give you this.
+- **Confidentiality**: outsiders cannot read your messages. Encryption gives you this.
+- **Anonymity**: outsiders cannot tell who is talking. Encryption alone does not.
 - **Metadata resistance**: outsiders cannot map who talks to whom, when, or how often. Most "private" tools lack it.
-- **Censorship circumvention**: communication works on a filtered but functioning internet. Decentralization alone does not give you this.
+- **Censorship circumvention**: communication works on a filtered internet. Decentralization alone does not give you this.
 - **Infrastructure independence**: communication works with no internet, cell service, or servers.
-- **Disruption tolerance**: communication survives intermittent or partitioned links by storing and forwarding.
+- **Disruption tolerance**: communication survives intermittent or broken links by storing and forwarding.
 
 No single tool covers all six. The first four matter when the internet works but is watched or filtered; the last two when connectivity itself has failed.
 
 **Inclusion is not a security endorsement.**
 
 - Assume no independent audit unless the entry names one.
-- If your safety depends on a tool, start from your own threat model. EFF's Surveillance Self-Defense, under Guides and Threat Models below, is a good starting point.
-- Prefer audited tools with documented limitations over impressive claims.
-- Audit citations, encryption defaults, and metadata notes were last checked against project documentation in September 2026. Treat them as snapshots and check upstream.
+- If your safety depends on a tool, start from your own threat model. EFF's Surveillance Self-Defense, under Guides and Threat Models below, is a good place to begin.
+- Prefer audited tools with known limitations over impressive claims.
+- Audit citations, encryption defaults, and metadata notes were last checked in September 2026. Treat them as snapshots and check upstream.
 
 **How this list is maintained.** Inclusion, exclusion, and the criteria above are decided by a human maintainer, me, by hand. AI tooling helps draft entry text and cross-check licenses, audit citations, and project status. Every claim is verified against the project's own documentation before it lands.
 
