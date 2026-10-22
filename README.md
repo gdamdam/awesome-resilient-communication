@@ -2,20 +2,9 @@
 
 A curated list of open protocols, applications, hardware, and resources for communication during internet shutdowns, disasters, censorship, and off-grid operation.
 
-**Scope.** Tools that keep people exchanging messages, files, and situational information when normal infrastructure is down, degraded, or hostile. Every software entry has a working open-source implementation. A few flagged exceptions are source-available under non-OSI terms. Resilience must be in the architecture, not in the marketing.
+**Scope.** Tools that keep people exchanging messages, files, and situational information when normal infrastructure is down, degraded, or hostile. Every software entry has a working open-source implementation; a few flagged exceptions are source-available under non-OSI terms. Resilience must be in the architecture, not in the marketing. Cryptocurrency-dependent projects, AI tools, closed-source products, conventional VPNs, and military-only technology are out of scope, as are encrypted messengers that depend on central servers: Signal and WhatsApp are excellent, but they stop working exactly when you need this list. Read [CONTRIBUTING.md](CONTRIBUTING.md) for the details and before submitting a project. **Dormant** entries still work but have had no real development for about 2 years, **Experimental** entries are not yet ready to rely on, and dead projects are in the [Graveyard](#graveyard).
 
-**Out of scope:**
-- Cryptocurrency- and token-dependent projects.
-- AI tools and agent frameworks.
-- Closed-source products and conventional VPN services.
-- Encrypted messengers that depend on central servers. Signal and WhatsApp are excellent, but they stop working exactly when you need this list.
-- Military-only technology.
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a project.
-
-**Dormant** entries still work but have had no real development for about 2 years. **Experimental** entries are promising but not yet ready to rely on. Dead projects are in the Graveyard at the bottom.
-
-**How to read this list.** "Resilient" means six different things that often get mixed up:
+**How to read this list.** "Resilient" means six different things that often get mixed up. The first four matter when the internet works but is watched or filtered; the last two when connectivity itself has failed. No single tool covers all six.
 
 - **Confidentiality**: outsiders cannot read your messages. Encryption gives you this.
 - **Anonymity**: outsiders cannot tell who is talking. Encryption alone does not.
@@ -24,16 +13,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a project.
 - **Infrastructure independence**: communication works with no internet, cell service, or servers.
 - **Disruption tolerance**: communication survives intermittent or broken links by storing and forwarding.
 
-No single tool covers all six. The first four matter when the internet works but is watched or filtered; the last two when connectivity itself has failed.
-
-**Inclusion is not a security endorsement.**
-
-- Assume no independent audit unless the entry names one.
-- If your safety depends on a tool, start from your own threat model. EFF's Surveillance Self-Defense, under Guides and Threat Models below, is a good place to begin.
-- Prefer audited tools with known limitations over impressive claims.
-- Audit citations, encryption defaults, and metadata notes were last checked in September 2026. Treat them as snapshots and check upstream.
-
-**How this list is maintained.** Inclusion, exclusion, and the criteria above are decided by a human maintainer, me, by hand. AI tooling helps draft entry text and cross-check licenses, audit citations, and project status. Every claim is verified against the project's own documentation before it lands.
+**Inclusion is not a security endorsement.** Start from your own threat model; see [Guides and Threat Models](#guides-and-threat-models).
 
 ## Contents
 
@@ -237,6 +217,13 @@ Nearly everything here shares one failure mode: it only works if it was set up b
 A reasonable minimum: pick the failure modes that apply to you, choose at least one tool for each, and provision contacts, keys, hardware, and permissions in advance. Then test each condition separately: no internet, filtered internet, intermittent connectivity, servers unreachable, limited physical range. Turning the internet off tests only the first.
 
 ## Guides and Threat Models
+**Inclusion in this list is not a security endorsement.**
+
+- Assume no independent audit unless the entry names one.
+- If your safety depends on a tool, start from your own threat model. EFF's Surveillance Self-Defense, below, is a good place to begin.
+- Prefer audited tools with known limitations over impressive claims.
+- Audit citations, encryption defaults, and metadata notes were last checked in September 2026. Treat them as snapshots and check upstream.
+
 - [EFF Surveillance Self-Defense](https://ssd.eff.org/) - Practical security guides for protesters, journalists, and other at-risk users. By the Electronic Frontier Foundation.
 - [net4people/bbs](https://github.com/net4people/bbs) - Multilingual forum and reading list on censorship-circumvention research and deployment reports.
 - [Security in a Box](https://securityinabox.org/) - Digital-security guides for human rights defenders. By Front Line Defenders.
@@ -282,6 +269,8 @@ Deeper dives into single technologies that this list covers only for their resil
 - [awesome-offline-knowledge](https://github.com/gdamdam/awesome-offline-knowledge) - This list's sibling: keeping knowledge accessible without the internet.
 - [awesome-privacy](https://github.com/Lissy93/awesome-privacy) - Privacy-respecting software, including encrypted messengers.
 - [awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted) - Self-hosted server software, including communication systems.
+
+**How this list is maintained.** Inclusion, exclusion, and the criteria above are decided by a human maintainer, me, by hand. AI tooling helps draft entry text and cross-check licenses, audit citations, and project status. Every claim is verified against the project's own documentation before it lands.
 
 ## Contributors
 
