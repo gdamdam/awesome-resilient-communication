@@ -6,7 +6,7 @@ A curated list of open protocols, applications, hardware, and resources for comm
 
 **Out of scope:** cryptocurrency-dependent projects, AI tools, closed-source products, conventional VPNs, military-only technology, and encrypted messengers that depend on central servers. Signal and WhatsApp are excellent, but they stop working exactly when you need this list.
 
-**Tags.** **Dormant** entries still work but have had no real development for about 2 years. **Experimental** entries are not yet ready to rely on. Dead projects are in the [Graveyard](#graveyard). Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a project.
+**Tags.** **Dormant** entries still work but have had no real development for about 2 years. **Experimental** entries are not yet ready to rely on. Dead projects are in the Graveyard. Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a project.
 
 **How to read this list.** "Resilient" means six different things that often get mixed up:
 
@@ -19,7 +19,7 @@ A curated list of open protocols, applications, hardware, and resources for comm
 
 The first four matter when the internet works but is watched or filtered; the last two when connectivity itself has failed. No single tool covers all six.
 
-**Inclusion is not a security endorsement.** Start from your own threat model; see [Guides and Threat Models](#guides-and-threat-models).
+**Inclusion is not a security endorsement.** Start from your own threat model; see Guides and Threat Models.
 
 ## Contents
 
