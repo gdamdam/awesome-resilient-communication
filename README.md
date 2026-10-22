@@ -2,9 +2,13 @@
 
 A curated list of open protocols, applications, hardware, and resources for communication during internet shutdowns, disasters, censorship, and off-grid operation.
 
-**Scope.** Tools that keep people exchanging messages, files, and situational information when normal infrastructure is down, degraded, or hostile. Every software entry has a working open-source implementation; a few flagged exceptions are source-available under non-OSI terms. Resilience must be in the architecture, not in the marketing. Cryptocurrency-dependent projects, AI tools, closed-source products, conventional VPNs, and military-only technology are out of scope, as are encrypted messengers that depend on central servers: Signal and WhatsApp are excellent, but they stop working exactly when you need this list. Read [CONTRIBUTING.md](CONTRIBUTING.md) for the details and before submitting a project. **Dormant** entries still work but have had no real development for about 2 years, **Experimental** entries are not yet ready to rely on, and dead projects are in the [Graveyard](#graveyard).
+**Scope.** Tools that keep people exchanging messages, files, and situational information when normal infrastructure is down, degraded, or hostile. Resilience must be in the architecture, not in the marketing. Every software entry has a working open-source implementation; a few flagged exceptions are source-available under non-OSI terms.
 
-**How to read this list.** "Resilient" means six different things that often get mixed up. The first four matter when the internet works but is watched or filtered; the last two when connectivity itself has failed. No single tool covers all six.
+**Out of scope:** cryptocurrency-dependent projects, AI tools, closed-source products, conventional VPNs, military-only technology, and encrypted messengers that depend on central servers. Signal and WhatsApp are excellent, but they stop working exactly when you need this list.
+
+**Tags.** **Dormant** entries still work but have had no real development for about 2 years. **Experimental** entries are not yet ready to rely on. Dead projects are in the [Graveyard](#graveyard). Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a project.
+
+**How to read this list.** "Resilient" means six different things that often get mixed up:
 
 - **Confidentiality**: outsiders cannot read your messages. Encryption gives you this.
 - **Anonymity**: outsiders cannot tell who is talking. Encryption alone does not.
@@ -12,6 +16,8 @@ A curated list of open protocols, applications, hardware, and resources for comm
 - **Censorship circumvention**: communication works on a filtered internet. Decentralization alone does not give you this.
 - **Infrastructure independence**: communication works with no internet, cell service, or servers.
 - **Disruption tolerance**: communication survives intermittent or broken links by storing and forwarding.
+
+The first four matter when the internet works but is watched or filtered; the last two when connectivity itself has failed. No single tool covers all six.
 
 **Inclusion is not a security endorsement.** Start from your own threat model; see [Guides and Threat Models](#guides-and-threat-models).
 
