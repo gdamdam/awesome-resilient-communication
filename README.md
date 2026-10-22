@@ -109,6 +109,7 @@ The first four matter when the internet works but is watched or filtered; the la
 - [Columba](https://github.com/torlando-tech/columba) - Android messaging and voice client for Reticulum (LXMF/LXST). Connects over Bluetooth LE, Wi-Fi/TCP, or LoRa via RNode radios, and can bridge those interfaces so a local Bluetooth mesh reaches across a LAN or the internet. MPL-2.0, Android only.
 - [Meshenger](https://github.com/meshenger-app/meshenger-android) - Voice and video calls over the local network with no server. Works on community mesh networks with no internet at all.
 - [Meshing Around](https://github.com/SpudGunMan/meshing-around) - Python bot that turns a Meshtastic node into a BBS: store-and-forward mail, scheduled broadcasts, emergency-keyword alerts, mesh health tests, and lookups in a local Kiwix copy. Bridges up to nine meshes from one Raspberry Pi. The weather, email/SMS, and LLM features need internet or a local server, and Meshtastic's channel-encryption caveats apply.
+- [MeshLive](https://github.com/MeshLive/meshlive-android) - Bluetooth-only Android beta for voice/video calls and relayed livestreams without internet, SIM cards or servers; no independent security audit.
 - [qaul](https://qaul.net/) - Mesh messenger that uses Bluetooth LE, Wi-Fi Direct, and LAN at the same time, with store-and-forward delivery. No internet needed.
 
 ### Anonymous and Metadata-Resistant Messaging
